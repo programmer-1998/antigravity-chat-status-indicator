@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تست بصری آیکون تابلو خطر چشمک‌زن Antigravity</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #18181b;
+      color: #f4f4f5;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .sidebar {
+      width: 320px;
+      background: #27272a;
+      border: 1px solid #3f3f46;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+    .chat-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 14px;
+      margin-bottom: 8px;
+      border-radius: 8px;
+      background: #3f3f46;
+      font-size: 14px;
+    }
+    .chat-title {
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: right;
+    }
+    .spinner {
+      width: 16px;
+      height: 16px;
+      border: 2px solid #a1a1aa;
+      border-top-color: transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .controls {
+      margin-top: 24px;
+      display: flex;
+      gap: 12px;
+    }
+    button {
+      background: #eab308;
+      color: #000;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #facc15;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>پیش‌نمایش تعاملی وضعیت‌های چت در Antigravity</h2>
+  <p style="color: #a1a1aa; font-size: 14px; margin-bottom: 24px;">
+    چت اول در وضعیت فعال عادی (اسپینر لودینگ) است و چت دوم شبیه‌سازی وضعیت خطای مدل (تابلو خطر زرد چشمک‌زن) می‌باشد.
+  </p>
+
+  <aside class="sidebar" role="navigation">
+    <div class="chat-item" id="chat-normal">
+      <span class="chat-title">طراحی فرانت‌اند و کامپوننت دکمه‌ها</span>
+      <div class="spinner animate-spin"></div>
+    </div>
+
+    <div class="chat-item" id="chat-error" data-status="unavailable">
+      <span class="chat-title">پروژه دیباگ و بررسی کرش سرور</span>
+      <div class="spinner animate-spin"></div>
+    </div>
+
+    <div class="chat-item" id="chat-idle">
+      <span class="chat-title">گفتگوی پایانی و تنظیمات گیت‌هاب</span>
+    </div>
+  </aside>
+
+  <div class="controls">
+    <button onclick="window.__simulateModelUnavailable__(true)">شبیه‌سازی خطای چت اول</button>
+    <button onclick="window.__simulateModelUnavailable__(false)" style="background: #71717a; color: #fff;">بازنشانی وضعیت چت اول</button>
+  </div>
+
+  <script src="../styles/status-indicator.js"></script>
+</body>
+</html>

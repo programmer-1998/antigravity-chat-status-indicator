@@ -1,0 +1,30 @@
+{
+  "name": "antigravity-chat-status-indicator",
+  "version": "1.0.0",
+  "description": "Smart Model Unavailable & Connection Hazard Alert Indicator for Google Antigravity desktop client sidebar",
+  "type": "module",
+  "bin": {
+    "antigravity-status-indicator": "./scripts/patch.mjs"
+  },
+  "scripts": {
+    "patch": "node ./scripts/patch.mjs",
+    "unpatch": "node ./scripts/patch.mjs --unpatch"
+  },
+  "keywords": [
+    "antigravity",
+    "google-antigravity",
+    "antigravity-plugin",
+    "ui-enhancement",
+    "model-status",
+    "hazard-indicator",
+    "sidebar-alerts",
+    "developer-tools",
+    "electron-patch"
+  ],
+  "author": "Sina Khanzadeh",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/programmer-1998/antigravity-chat-status-indicator.git"
+  }
+}
